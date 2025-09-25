@@ -1,38 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-    <style>
-        .footer{
-            max-height: 100vh;
-            height: 100%;
-        }
-    </style>
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bakes With SS</title>
+     <link rel="stylesheet" href="../Css/style.css">
 </head>
-<body style ="background-color: rgb(182, 126, 146);">
-    <header>
-        <nav>
-            <a href = "../index.html">Home</a>
-            <a href = "Cakes.html">Our Cakes</a>
-            <a href = "Order.html">Place Order</a>
-            <a href = "Contact.html">Contact Us</a>
-            <a href = "About.html">About Us</a>
-        </nav>
-    </header>
+<body>
+
+    <!--Navigation-->
+    <nav>
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <div class="nav-links" id="nav-links">
+        <a href="../index.html" >Home</a>
+        <a href = "Cakes.html">Our Cakes</a>
+        <a href = "Order.html">Place Order</a>
+        <a href = "Contact.html">Contact Us</a>
+        <a href = "About.html" class="active">About Us</a> 
+      </div>
+    </nav>
+  <main>
     <!--About Bakes With SS-->
+    <section class = "about-us card">
+        <h2>About Us</h2>
     <p>Bakes With SS was founded in 2025 by a student, Karabo Shingange. It sarted off as a home-based side hustle 
         baking birthday cakes for friends and family members. The small side hustle turned into a thriving business 
         through word of mouth and social media platforms.
     </p>
+    </section>
     <!--Mission and vision statement-->
-    <p>My mission is to craft beautiful, delicious and unforgettable cakes that brings joy to every celebration, and
-        is that i want to become Limpopo's most loved custom cake baker, known for creativity, consistency and exceptional 
-        customer experience, both in person and online.
-    </p>
-    <img src="/Assests/Profile.jpeg"  alt="Chocolate Cake" width="300" height="300">
-    
- <footer >&copy; Bakes With SS 2025</footer>
+    <section class = "mission-vision">
+        <div class ="card">
+            <h2>Our Mission</h2>
+            <p>Our mission is to craft beautiful, delicious and unforgettable cakes that brings joy to every celebration</p>
+        </div>
+        <div class = "card">
+            <h2>Our Vission</h2>
+            <p>We want to become Limpopo's most loved custom cake baker, known for creativity, consistency and exceptional 
+               customer experience, both in person and online.
+            </p>
+        </div>
+    </section>
+    <!--The Baker-->
+    <section class = "baker">
+        <h2>Meet the Baker</h2>
+        <div class = "card">
+            <img src = "../Assests/Our Baker.jpg" alt ="Baker" width = "200" style = "border-radius: 50%;">
+            <h3>Karabo S.</h3>
+            <p><strong>Founder and Head Baker</strong></p>
+            <p>
+              “Baking isn’t just mixing ingredients; it’s about creating smiles and sweet memories. 
+            I pour my heart into every cake I make.”
+            </p>
+        </div>
+    </section>
+    <section class="contact-socials">
+       <h2>Follow Us</h2>
+       <a href="#"><img src="../Assests/IG.png" alt="Instagram" width="30"></a>
+       <a href="#"><img src="../Assests/FB.jpeg" alt="Facebook" width="40"></a>
+       <a href="#"><img src="../Assests/TikTok.webp" alt="TikTok" width="30"></a>
+    </section>
+  </main>
+    <footer >&copy; Bakes With SS 2025</footer>
+  
+  <!--JavaScript for hambuger menu-->
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    })
+  </script>
 </body>
 </html>

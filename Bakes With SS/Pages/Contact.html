@@ -4,25 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bakes With SS</title>
+     <link rel="stylesheet" href="../Css/style.css">
 </head>
-<body style ="background-color: rgb(182, 126, 146);">
-    <header>
-        <nav>
-            <a href = "../index.html">Home</a>
-            <a href = "Cakes.html">Our Cakes</a>
-            <a href = "Order.html">Place Order</a>
-            <a href = "Contact.html">Contact Us</a>
-            <a href = "About.html">About Us</a>
-        </nav>
-    </header>
+<body>
+    <nav>
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <div class="nav-links" id="nav-links">
+        <a href="../index.html" >Home</a>
+        <a href = "Cakes.html">Our Cakes</a>
+        <a href = "Order.html">Place Order</a>
+        <a href = "Contact.html" class="active">Contact Us</a>
+        <a href = "About.html">About Us</a> 
+      </div>
+    </nav>
+    <main>
     <!--Social media platforms-->
-    <p>For inquiries you can contact me through my:</p>
-        <ol style="list-style-type: square;"> 
-            <li>Instagram page: bakeswithss</li>
-            <li>Tik tok page: bakeswithss</li>
-            <li>E-mail: bakeswithss@gmail.com</li>
-        </ol>
-    <P></P>
-     <footer >&copy; Bakes With SS 2025</footer>
+    <section class="contact">
+      <h1>Get in Touch</h1>
+      <p>We’d love to hear from you!</p>
+    </section>
+    <section class="contact-info card">
+      <h2>Contact Information</h2>
+      <p><strong> Address:</strong> 256 University road, Mankweng</p>
+      <p><strong> Phone:</strong> +27 63 372 6306</p>
+      <p><strong> Email:</strong> info@bakeswithss.co.za</p>
+    </section>
+     <section class="contact-map card">
+       <h2>Find Us</h2>
+       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d29186.09654916283!2d29.696735500000017!3d-23.880323999999987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sza!4v1758546764748!5m2!1sen!2sza"
+        width="300" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <section class="contact-socials">
+       <h2>Follow Us</h2>
+       <a href="#"><img src="../Assests/IG.png" alt="Instagram" width="30"></a>
+       <a href="#"><img src="../Assests/FB.jpeg" alt="Facebook" width="40"></a>
+       <a href="#"><img src="../Assests/TikTok.webp" alt="TikTok" width="30"></a>
+    </section>
+    </main>
+    <footer >&copy; Bakes With SS 2025</footer>
+  
+  <!--JavaScript for hambuger menu-->
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    })
+  </script>
 </body>
 </html>

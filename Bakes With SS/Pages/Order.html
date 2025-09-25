@@ -4,34 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bakes With SS</title>
+     <link rel="stylesheet" href="../Css/style.css">
 </head>
-<body style ="background-color: rgb(182, 126, 146);">
-     <header>
-        <nav>
-            <a href = "../index.html">Home</a>
-            <a href = "Cakes.html">Our Cakes</a>
-            <a href = "Order.html">Place Order</a>
-            <a href = "Contact.html">Contact Us</a>
-            <a href = "About.html">About Us</a> 
-        </nav>
-     </header>
+<body>
+    <!--Navigation-->
+    <nav>
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <div class="nav-links" id="nav-links">
+        <a href="../index.html" >Home</a>
+        <a href = "Cakes.html">Our Cakes</a>
+        <a href = "Order.html" class="active">Place Order</a>
+        <a href = "Contact.html">Contact Us</a>
+        <a href = "About.html">About Us</a> 
+      </div>
+    </nav>
+    <main>
+     <section class = "order">
+        <h1>Place Your Order</h1>
+        <p>Delicious treats, baked with love, delivered to you!</p>
+     </section>
      <!--Form for orders-->
+     <section class = "order-form card">
+        <h2>Order form</h2>
         <form>
-            <label for="oid">Order ID:</label>
-            <br>
-            <input type="text" name="Order ID:" placeholder="Enter your order ID">
-            <br>
-            <label for="daddress">Delivery Address:</label>
-            <br>
-            <input type="text" name="Delivery Address:" placeholder="Enter your delivery address">
-            <br>
-            <label for="cname">Client Name:</label>
-            <br>
-            <input type="text" name="Client Name:" placeholder="Enter your name and surname">
-            <br>
-            <button type="submit">Submit</button>
+            <!--Customer Details-->
+            <input type = "text" name = "name" placeholder = "Enter your full names" required>
+            <input type = "email" name = "email" placeholder = "Enter your email" required>
+            <input type = "tel" name = "phone" placeholder = "Enter your phone number" required><br/>
+            
+            <!--Order Details-->
+            <label for="product">Choose your cake:</label><br/>
+            <select name = "product" id = "product" required>
+                <option value="">Select a Cake</option>
+                <option value = "chocolate">Chocolate Cake</option>
+                <option value = "redvelvet">Red Velvet Cake</option>
+                <option value = "vanilla">Vanilla Cake</option>
+                <option value = "chocVanilla">Chocolate Vanilla Cake</option>
+                <option value = "caramelChoc">Carmel Chocolate Cake</option>
+                <option value = "chocStCake">Chocolate Strawberry Cake</option>
+                <option value = "custom">Custom cake</option>
+            </select><br/>
+
+            <!--Instructions-->
+            <textarea name = "message" rows ="4" placeholder ="Special instructions(e.g. Happy birthday mom)"></textarea><br/>
+            
+            <!--Pickup Or delivery options-->
+            <label>Delivery Option:</label>
+            <div class = "delivery-options">
+                <input type = "radio" name ="delivery" value = "pickup" required>Pickup<br/>
+                <input type = "radio" name = "delivery" value = "delivery" >Delivery
+            </div>
+            <!--Adress field(it is hidden bt default)-->
+            <div id = "address-section" style = "display: none; margin-top: 1rem;">
+                <label for = "address">Delivery Address:</label>
+                <textarea id = "address" name = "address" rows = "4" placeholder="Enter your address"></textarea>
+            </div>
+            <!--Submit button-->
+            <input type = "submit" value = "Place Order" class="btn">
         </form>
-   
+     </section><br/>
+        <!--Payment information-->
+        <section class = "order-info card">
+            <h2>Payment options</h2>
+            <p>We accept EFT, Cash on delivery and Paypal.</p>
+        </section>
+        <a href = "../Pages/Cakes.html" class="btn">Back to cakes</a>
+         
+     <section class="contact-socials">
+       <h2>Follow Us</h2>
+       <a href="#"><img src="../Assests/IG.png" alt="Instagram" width="30"></a>
+       <a href="#"><img src="../Assests/FB.jpeg" alt="Facebook" width="40"></a>
+       <a href="#"><img src="../Assests/TikTok.webp" alt="TikTok" width="30"></a>
+     </section>
+    </main>
      <footer >&copy; Bakes With SS 2025</footer>
+  
+  <!--JavaScript for hambuger menu and delivery toggle-->
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+    const deliveryOptions = document.querySelectorAll('input[name="delivery"]');
+    const addressAddress = document.getElementById("address-section");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+
+    //Delivery option toggle
+    deliveryOptions.forEach(option => {
+        option.addEventListener("change", ()=>{
+            if(option.value==="delivery" && option.checked){
+                addressAddress.style.display = "block";
+            }else{
+                addressAddress.style.display = "none";
+            }
+        });
+        
+    });
+  </script>
 </body>
 </html>

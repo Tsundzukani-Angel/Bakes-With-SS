@@ -1,0 +1,354 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+/* body */
+body{
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #333;
+}
+/* header */
+header {
+  background: linear-gradient(90deg, #ffb6c1, #ff69b4); /* Gradient pink */ 
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  
+/* header{}*/
+}
+/* Navigation */
+nav
+{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  background: #ff69b4;
+  padding: 0.5rem 1rem;
+}
+nav a
+{
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0.5rem 1rem;
+  font-weight: bold;
+  transition: 0.3s;
+}
+nav a :hover, nav a.active
+{
+  color: #ffe4ec;
+}
+/* Hamburger toggle */
+.menu-toggle
+{
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #ffffff;
+}
+.nav-links
+{
+  display: flex;
+  flex-wrap: wrap;
+}
+.nav-links.show
+{
+  display:flex;
+  flex-direction: column;
+}
+/* Buttons */
+button,
+input[type="submit"] {
+  background-color: #ff69b4; /* pink background */
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: #ff1493;
+}
+/* Card component */
+.card {
+  background-color: #fff5f8;
+  border: 2px solid #ffc0cb;
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin: 1rem auto;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(255, 182, 193, 0.4);
+}
+
+.card h2 {
+  color: #b03060;
+}
+/* footer */
+footer {
+  background: #ffb6c1;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-top: 3px solid #ff69b4;
+}
+
+/* Homepage banner */
+.hero {
+  background: #ffe4ec;
+  color: rgb(146, 76, 76);
+  text-align: center;
+  padding: 3rem 1rem;
+  border-bottom: 3px solid #ff69b4;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+/* Best sellers section */
+.best-sellers {
+  text-align: center;
+  padding: 2rem;
+}
+/* Best sellers grid */
+.cake-grid
+{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem;
+}
+.card
+{
+  background: #fff;
+  border: 1px solid #ffc0cb;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.card img
+{
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+/* Newsletter form */
+.newsletter form {
+  margin-top: 1rem;
+}
+
+.newsletter input[type="email"] {
+  padding: 0.7rem;
+  border: 1px solid #ffc0cb;
+  border-radius: 20px;
+  margin-right: 0.5rem;
+}
+
+.newsletter input[type="submit"] {
+  padding: 0.7rem 1.2rem;
+}
+/* Social links */
+.socials {
+  text-align: center;
+  padding: 2rem;
+}
+
+.socials a {
+  margin: 0 10px;
+}
+/* contact page */
+.contact {
+  text-align: center;
+  padding: 2rem;
+  background: #ffe4ec;
+  border-bottom: 3px solid #ff69b4;
+}
+
+.contact h1 {
+  font-size: 2rem;
+  color: #b03060;
+}
+/* contact form layout */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem;
+  border: 1px solid #ffc0cb;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.contact-form input[type="submit"] {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.contact-form input[type="submit"]:hover {
+  background-color: #ff1493;
+}
+.contact-info {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+.contact-socials {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.contact-socials a {
+  margin: 0 10px;
+}
+/*Order page*/
+.order{
+  text-align: center;
+  padding: 2rem;
+  background: #ffe4ec;
+  border-bottom: 3px solid #ff69b4;
+}
+.order h1
+{
+  font-size: 2rem;
+  color:#b03060;
+}
+/*Order form layout*/
+.order-form form
+{
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+.order-form input,
+.order-form select,
+.order-form textarea
+{
+  padding: 0.8rem;
+  border: 1px solid #ffc0cb;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+.order-form input[type = "submit"]
+{
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.order-form input[type = "submit"] :hover
+{
+  background-color: #ff1493;
+}
+/*Deliver options radio buttons*/
+.delivery-options
+{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+/*Abous us page*/
+.about-us
+{
+  margin: 2rem auto;
+  max-width: 800px;
+  line-height: 1.8;
+  text-align: center;
+}
+.about-us h2
+{
+   font-size: 2.2rem;
+   color: #b03060;
+   margin-bottom: 0.5rem;
+}
+/* Mission and Vision cards layout*/
+.mission-vision
+{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem;
+}
+.mission-vision .card
+{
+  background: #fff0f5;
+  border: 1px solid #ffc0cb;
+}
+/* The bakers cards */
+.baker
+{
+  text-align: center;
+  padding: 2rem;
+}
+.baker img
+{
+  margin-bottom: 1rem;
+  border: 3px solid #ff69b4;
+}
+/* button styles*/
+.btn
+{
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: #ff69b4;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.btn:hover
+{
+  background: #ff1493;
+}
+/* responsive */
+/* phones */
+@media(max-width: 768px)
+{
+  /* Show hamburger menu */
+  .menu-toggle
+  {
+    display: block;
+  }
+  /* hides the navigation links by default */
+  .nav-links
+  {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    background: #ff69b4;
+  }
+  /* Show navigation when menu is toggled */
+  .nav-links.show
+  {
+    display: flex;
+  }
+  /* Mobile navigation links */
+  .nav-links a
+  {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+  }
+}

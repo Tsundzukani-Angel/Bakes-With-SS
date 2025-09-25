@@ -4,46 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bakes With SS</title>
+     <link rel="stylesheet" href="../Css/style.css">
 </head>
-<body style ="background-color: rgb(182, 126, 146);">
-    <header>
-        <nav>
-            <a href = "../index.html">Home</a>
-            <a href = "Cakes.html">Our Cakes</a>
-            <a href = "Order.html">Place Order</a>
-            <a href = "Contact.html">Contact Us</a>
-            <a href = "About.html">About Us</a> 
-           
-        </nav>
-    </header>
+<body>
+  
+   
+    <nav>
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <div class="nav-links" id="nav-links">
+        <a href="../index.html" >Home</a>
+        <a href = "Cakes.html" class="active">Our Cakes</a>
+        <a href = "Order.html">Place Order</a>
+        <a href = "Contact.html">Contact Us</a>
+        <a href = "About.html">About Us</a> 
+      </div>
+    </nav>
+  <main>
+
+    <section class="hero">
+      <h1>Our Delicious Cakes</h1>
+      <p>Freshly baked with love and creativity. Choose your favorite and make every moment sweeter</p>
+    </section>    
     <!--The cakes being sold-->
-    <h2>Our Cakes</h2>
-    
-    <img src="/Assests/Chocolate Cake.jpeg" alt="Chocolate Cake" width="250" height="250">
-    <img src = "/Assests/ChocCake.jpg" alt ="Chocolate Cake" width = "250" height = "250">
-    <button><a href = "Order.html">Place Order</button></a>
-    <figure>Chocolate Cake-R950</figure><br/>
-    
-    <img src ="/Assests/Chocolate Vanilla Cake.jpeg" alt="Chocolate Vanilla Cake" width="250" height="250">
-    <img src = "/Assests/ChocV.JPG" alt ="Chocolate Vanilla Cake" width="250" height="250">
-    <button><a href = "Order.html">Place Order</button></a>
-    <figure>Chocolate Vanilla Cake-R1000</figure><br/>
-    
-    <img src="/Assests/Caramel Chocolate Cake.jpeg" alt="Carmel Chocolate Cake" width="250" height="250">
-    <img src="/Assests/Caramel-Chocolate-Cake.webp" alt="Carmel Chocolate Cake" width="250" height="250">
-    <button><a href = "Order.html">Place Order</button></a>
-    <figure>Caramel Chocolate Cake-R1200</figure><br/>
-    
-    <img src="/Assests/Red Velvet Cake.jpeg" alt="Red velvet Cake" width="250" height="250">
-    <img src="/Assests/R.jpeg" alt="Red velvet cake" width="250" height="250">
-    <button><a href = "Order.html">Place Order</button></a>
-    <figure>Red velvet Cake-R500</figure><br/>
-    
-    <img src="/Assests/Vanilla Cake.jpeg" alt="Vanilla Cake" width="250" height="250">
-    <img src="/Assests/V.Cake.webp" alt="Vanilla cake" width="250" height="250">
-    <button><a href = "Order.html">Place Order</button></a>
-    <figure>Vanilla Cake-R500</figure><br/>
-    
-     <footer >&copy; Bakes With SS 2025</footer>
+    <!--Cakes grid-->
+    <section class = "cake-grid">
+      <div class="card">
+        <img src="/Assests/Chocolate Cake.jpeg" alt="Chocolate Cake" width="250" height="250">
+        <img src = "/Assests/ChocCake.jpg" alt ="Chocolate Cake" width = "250" height = "250">
+        <h3>Chocolate Cake</h3>
+        <p>R950</p>
+        <a href = "Order.html" class="btn">Place Order</a>
+      </div>
+
+      <div class = "card">
+        <img src ="/Assests/Chocolate Vanilla Cake.jpeg" alt="Chocolate Vanilla Cake" width="250" height="250">
+        <img src = "/Assests/ChocV.JPG" alt ="Chocolate Vanilla Cake" width="250" height="250">
+        <h3>Chocolate Vanilla Cake</h3>
+        <p>R1000</p>
+        <a href = "Order.html" class="btn">Place Order</a>
+      </div>
+
+      <div class = "card">
+        <img src="/Assests/Caramel Chocolate Cake.jpeg" alt="Carmel Chocolate Cake" width="250" height="250">
+        <img src="/Assests/Caramel-Chocolate-Cake.webp" alt="Carmel Chocolate Cake" width="250" height="250">
+        <h3>Caramel Chocolate Cake</h3>
+        <p>R1200</p>
+        <a href = "Order.html" class="btn">Place Order</a>
+      </div>
+        
+      <div class = "card">
+        <img src="/Assests/Red Velvet Cake.jpeg" alt="Red velvet Cake" width="250" height="250">
+       <img src="/Assests/R.jpeg" alt="Red velvet cake" width="250" height="250">
+       <h3>Red velvet Cake</h3>
+       <p>R500</p>
+       <a href = "Order.html" class="btn">Place Order</a>
+      </div>
+       
+      <div class = "card">
+       <img src="/Assests/Vanilla Cake.jpeg" alt="Vanilla Cake" width="250" height="250">
+       <img src="/Assests/V.Cake.webp" alt="Vanilla cake" width="250" height="250">
+       <h3>Vanilla Cake</h3>
+       <p>R500</p>
+       <a href = "Order.html" class="btn">Place Order</a>
+      </div>  
+
+      <div class = "card">
+        <img src = "/Assests/chocolate strawberry cake.jpg" alt = "chocolate strawberry cake" width="250" height="250">
+        <img src = "/Assests/ChocStCake.webp" alt = "chocolate strawberry cake" width="250" height="250">
+        <h3>Chocolate Strawberry Cake</h3>
+        <p>R1200</p>
+        <a href = "Order.html" class="btn">Place Order</a>
+      </div>
+    </section>
+
+    <section class="contact-socials">
+       <h2>Follow Us</h2>
+       <a href="#"><img src="../Assests/IG.png" alt="Instagram" width="30"></a>
+       <a href="#"><img src="../Assests/FB.jpeg" alt="Facebook" width="40"></a>
+       <a href="#"><img src="../Assests/TikTok.webp" alt="TikTok" width="30"></a>
+    </section>
+  </main>
+    <footer >&copy; Bakes With SS 2025</footer>
+  
+  <!--JavaScript for hambuger menu-->
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    })
+  </script>
 </body>
 </html>

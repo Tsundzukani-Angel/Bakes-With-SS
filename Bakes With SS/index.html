@@ -4,22 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bakes With SS</title>
+    <link rel="stylesheet" href="./Css/style.css">
 </head>
-<body style ="background-color: rgb(182, 126, 146);">
-    <header>
-        <nav>
-            <a href = "index.html">Home</a>
-            <a href = "./Pages/Cakes.html">Our Cakes</a>
-            <a href = "./Pages/Order.html">Place Order</a>
-            <a href = "./Pages/Contact.html">Contact Us</a>
-            <a href = "./Pages/About.html">About Us</a>  
-        </nav>
-    </header>
+<body>
+   <!--Navigation-->
+   <nav>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <div class="nav-links" id="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="./Pages/Cakes.html">Our Cakes</a>
+      <a href="./Pages/Order.html">Place Order</a>
+      <a href="./Pages/Contact.html">Contact Us</a>
+      <a href="./Pages/About.html">About Us</a>
+    </div>
+    </nav>
+
+  <main>
     <!--Welcome message-->
+  <section class ="hero">
     <h1>Bakes with SS: A Nostalgic Taste</h1>
-    <p>Welcome to Bakes with SS! We are thrilled and delighted to share delicious
-         memories with you that are nostalgic-after all it’s a nostalgic taste isn’t it?</p>
-         <img src = "./Assests/Profile.jpeg" width = "80" height ="80">
+      <p>Welcome to Bakes with SS! We are thrilled and delighted to share delicious
+         memories with you that are nostalgic, after all it’s a nostalgic taste isn’t it?</p>
+      <p><strong>Sweetness in Every Bite!</strong></p>
+  </section> 
+
+      <!-- Best Sellers -->
+  <section class="best-sellers">
+    <h2>Our Best Sellers</h2>
+    <div class ="cake-grid">
+     <div class="card">
+      <img src="./Assests/Chocolate Cake.jpeg" alt="Chocolate Cake" width="100%">
+      <h3>Chocolate Cake</h3>
+      <p>R950</p>
+     </div>
+
+     <div class="card">
+      <img src="./Assests/Red Velvet Cake.jpeg" alt="Red Velvet Cake" width="100%">
+      <h3>Red Velvet</h3>
+      <p>R500</p>
+     </div>
+
+     <div class="card">
+      <img src="./Assests/Chocolate Vanilla Cake.jpeg" alt="Chocolate Vanilla Cake" width="100%">
+      <h3>Chocolate Vanilla Cake</h3>
+      <p>R500</p>
+     </div>
+     
+     <div class = "card">
+      <img src = "./Assests/chocolate strawberry cake.jpg" alt = "Chocolate Strawberry Cake" width="100%">
+      <h3>Chocolate Strawberry Cake</h3>
+      <p>R1200</p>
+     </div>
+
+    </div>
+  </section>  
+
+   <!-- About Preview -->
+  <section class="about-preview card">
+    <h2>About Bakes With SS</h2>
+    <p>We create cakes that bring smiles and sweetness to every occasion. Made with love, passion, and the finest ingredients.</p>
+    <a href="./Pages/About.html" class="btn">Read More</a>
+  </section>
+
+   <!-- Special Offers -->
+  <section class="special-offer card">
+    <h2>Special Offer</h2>
+    <p>Get 10% off all birthday cakes this month!</p>
+        <a href = "./Pages/Cakes.html" class="btn">Order Now</a>
+  </section>
+
+  <!--Newsletter card-->
+  <section class="newsletter card">
+    <h2>Stay Updated</h2>
+    <p>Subscribe for sweet deals and new cake launches!</p>
+    <form>
+      <input type="email" placeholder="Enter your email">
+      <input type="submit" value="Subscribe" class="btn">
+    </form>
+  </section>
+
+  <!-- Social Media -->
+  <section class="socials">
+    <h2>Follow Us</h2>
+    <a href="#"><img src="./Assests/IG.png" alt="Instagram" width="30"></a>
+    <a href="#"><img src="./Assests/FB.jpeg" alt="Facebook" width="40"></a>
+    <a href="#"><img src="./Assests/TikTok.webp" alt="TikTok" width="30"></a>
+  </section>
+  </main>
+
+  <!--footer-->
     <footer >&copy; Bakes With SS 2025</footer>
+  
+  <!--JavaScript for hambuger menu-->
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    })
+  </script>
 </body>
 </html>
