@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products | Stoltz's Bakery</title>
+     <link rel="stylesheet" href="../Css/style.css">
+</head>
+<body>
+  
+   
+    <nav>
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <div class="nav-links" id="nav-links">
+        <a href="../index.html" >Home</a>
+        <a href = "./Products.html">Our Products</a>
+        <a href = "./Order.html">Place Order</a>
+        <a href = "./Contact.html" class="active">Contact Us</a>
+        <a href = "./About.html">About Us</a>
+        <a href = "./Reviews.html">Reviews</a> 
+        <a href = "./Suggestions.html">Suggestions</a>
+      </div>   
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search..." onkeyup="performSearch()">
+        <div id="searchResults" class="search-results"></div>
+      </div>
+    </nav>
+  <main>
+   <section class="products">
+    <h1>Our Baked Delights</h1>
+    <p>Freshly baked with love and creativity. Choose your favorite and make every moment sweeter</p>
+   </section>
+    
+     <!-- Category Filters -->
+    <div class="category-buttons">
+      <button class="filter-btn" data-category="all">All</button>
+      <button class="filter-btn" data-category="cakes">Cakes</button>
+      <button class="filter-btn" data-category="muffins">Muffins</button>
+    </div>
+
+    <!--Products grid-->
+    <div class = "product-grid">
+      <!-- Cakes -->
+      <div class="card" data-category="cakes">
+        <img src="/Assests/Chocolate Cake.jpeg" alt="Chocolate Cake" width="250" height="250">
+        <h3>Chocolate Cake</h3>
+        <p>R950</p>
+        <a href = "Order.html?product=Chocolate Cake" class="btn">Place Order</a>
+      </div>
+     
+      <div class = "card" data-category="cakes">
+        <img src ="/Assests/Chocolate Vanilla Cake.jpeg" alt="Chocolate Vanilla Cake" width="250" height="250">
+        <h3>Chocolate Vanilla Cake</h3>
+        <p>R1000</p>
+        <a href = "Order.html?product=Chocolate Vanilla Cake" class="btn">Place Order</a>
+      </div>
+
+      <div class = "card" data-category="cakes">
+        <img src="/Assests/Caramel Chocolate Cake.jpeg" alt="Carmel Chocolate Cake" width="250" height="250">
+        <h3>Caramel Chocolate Cake</h3>
+        <p>R1200</p>
+        <a href = "Order.html?product=Caramel Chocolate Cake" class="btn">Place Order</a>
+      </div>
+        
+      <div class = "card" data-category="cakes">
+       <img src="/Assests/Red Velvet Cake.jpeg" alt="Red velvet Cake" width="250" height="250">
+       <h3>Red velvet Cake</h3>
+       <p>R500</p>
+       <a href = "Order.html?product=Red velvet Cake" class="btn">Place Order</a>
+      </div>
+       
+      <div class = "card" data-category="cakes">
+       <img src="/Assests/Vanilla Cake.jpeg" alt="Vanilla Cake" width="250" height="250">
+       <h3>Vanilla Cake</h3>
+       <p>R500</p>
+       <a href = "Order.html?product=Vanilla Cake" class="btn">Place Order</a>
+      </div>  
+
+      <div class = "card" data-category="cakes">
+        <img src = "/Assests/chocolate strawberry cake.jpg" alt = "chocolate strawberry cake" width="250" height="250">
+        <h3>Chocolate Strawberry Cake</h3>
+        <p>R1200</p>
+        <a href = "Order.html?product=Chocolate Strawberry Cake" class="btn">Place Order</a>
+      </div>
+      
+      <div class = "card" data-category="cakes">
+        <img src ="/Assests/paw-petrol.webp" alt="Chocolate\Red velvet Cake" width="250" height="250">
+        <h3>Paw Petrol</h3>
+        <p>R900</p>
+        <a href = "Order.html?product=Paw Petrol" class="btn">Place Order</a>
+      </div>
+      
+      <div class = "card" data-category="cakes">
+        <img src ="/Assests/Mickey_Cake.jpg" alt="Mickey mouse cake" width="250" height="250">
+        <h3>Mickey Mouse</h3>
+        <p>R1500</p>
+        <a href = "Order.html?product=Mickey Mouse" class="btn">Place Order</a>
+      </div>
+
+      <div class = "card" data-category="cakes">
+        <img src ="/Assests/minnie_mouse.webp" alt="Minnie mouse cake" width="250" height="250">
+        <h3>Minnie Mouse</h3>
+        <p>R1800</p>
+        <a href = "Order.html?product=Minnie Mouse" class="btn">Place Order</a>
+      </div>
+      
+      <div class = "card" data-category="cakes">
+        <img src ="/Assests/Spiderman-cake.webp" alt="Spiderman Cake" width="250" height="250">
+        <h3>SpiderMan</h3>
+        <p>R1600</p>
+        <a href = "Order.html?product=SpiderMan" class="btn">Place Order</a>
+      </div>
+      
+      <!-- Muffins section -->
+       <div class="card" data-category="muffins">
+          <img src = "../Assests/Chocolate-muffin.webp" alt="Chocolate Muffins" width="250" height="250">
+          <h3>Chocolate Muffin</h3>
+          <p>R100 (2KG)</p>
+          <a href = "Order.html?product=Chocolate Muffin" class="btn">Place Order</a>
+       </div>
+
+        <div class ="card" data-category="muffins">
+          <img src = "../Assests/Blueberry-muffins.webp" alt="Blueberry Muffins" width="250" height="250">
+          <h3>Blueberry Muffin</h3>
+          <p>R120 (2KG)</p>
+          <a href = "Order.html?product=Blueberry Muffin" class="btn">Place Order</a>
+        </div>
+        
+        <div class ="card" data-category="muffins">
+          <img src = "../Assests/Banana_Muffins.jpg" alt="Banana Muffins" width="250" height="250">
+          <h3>Banana Muffin</h3>
+          <p>R90 (2KG)</p>
+          <a href = "Order.html?product=Banana Muffin" class="btn">Place Order</a>
+        </div>
+
+        <div class ="card" data-category="muffins">
+          <img src ="../Assests/Coconut-Muffins.jpg" alt="Coconut Muffins" width ="250" height="250">
+          <h3>Coconut Muffin</h3> 
+          <p>R100 (2KG)</p>
+          <a href = "Order.html?product=Coconut Muffin" class="btn">Place Order</a> 
+        </div>
+
+        <div class ="card" data-category="muffins">
+          <img src ="../Assests/Apple_Cinnamon_Oatmeal_Muffins.jpg" alt="Apple Cinnamon Oatmeal Muffins" width ="250" height="250">
+          <h3>Apple Cinnamon Oatmeal Muffins</h3> 
+          <p>R140 (2KG)</p>
+          <a href = "Order.html?product=Apple Cinnamon Oatmeal Muffins" class="btn">Place Order</a> 
+        </div>
+
+        <div class ="card" data-category="muffins">
+          <img src ="../Assests/Cranberry_Muffins.jpg" alt="Cranberry Muffins" width ="250" height="250">
+          <h3>Cranberry Muffins</h3> 
+          <p>R150 (2KG)</p>
+          <a href = "Order.html?product=Cranberry Muffins" class="btn">Place Order</a> 
+        </div>
+
+         <div class ="card" data-category="muffins">
+          <img src ="../Assests/Pumpkin-Apple_Muffins_with_Streusel_Topping.jpg" alt="Pumpkin-Apple Muffins with Streusel Topping" width ="250" height="250">
+          <h3>Pumpkin-Apple Muffins with Streusel Topping</h3> 
+          <p>R200 (2KG)</p>
+          <a href = "Order.html?product=Pumpkin-Apple Muffins with Streusel Topping" class="btn">Place Order</a> 
+        </div>
+
+        <div class ="card" data-category="muffins">
+          <img src = "../Assests/fresh-mint-chocolate-chip-muffins.webp" alt="Mint Chocolate Chip Muffins" width="250" height="250">
+          <h3>Mint Chocolate Chip Muffin</h3> 
+          <p>R150 (2KG)</p>
+          <a href = "Order.html?product=Mint Chocolate Chip Muffin" class="btn">Place Order</a>
+        </div>
+
+        <div class ="card" data-category="muffins">
+          <img src = "../Assests/Peanut_Butter_Banana_Muffins.jpg" alt="Peanut Butter Banana Muffins" width="250" height="250">
+          <h3>Peanut Butter Banana Muffins</h3> 
+          <p>R120 (2KG)</p>
+          <a href = "Order.html?product=Peanut Butter Banana Muffins" class="btn">Place Order</a>
+        </div>
+
+        <div class ="card" data-category="muffins">
+          <img src = "../Assests/Apple_Muffins.jpg" alt="Apple Muffins" width="250" height="250">
+          <h3>Apple Muffins</h3> 
+          <p>R130 (2KG)</p>
+          <a href = "Order.html?product=Apple Muffins" class="btn">Place Order</a>
+        </div>
+       </div>
+
+    <section class="contact-socials">
+       <h2>Follow Us</h2>
+       <a href="#"><img src="../Assests/IG.png" alt="Instagram" width="30"></a>
+       <a href="#"><img src="../Assests/FB.jpeg" alt="Facebook" width="40"></a>
+       <a href="#"><img src="../Assests/TikTok.webp" alt="TikTok" width="30"></a>
+    </section>
+  </main>
+    <footer >
+      <p>&copy; Stoltz's Bakery 2025</p>
+      <p id="date-time"></p>
+    </footer>
+  
+  <script>
+    //hambuger menu
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    })
+
+    const nav = document.querySelector("nav");
+
+       window.addEventListener("scroll", () => {
+        if (window.scrollY > 10) {
+          nav.classList.add("scrolled");
+        } else {
+           nav.classList.remove("scrolled");
+        }
+    });
+
+    const searchData = [
+     { keyword: "home", link: "../index.html" },
+     { keyword: "homepage", link: "../index.html" },
+  
+     { keyword: "about", link: "./About.html" },
+     { keyword: "who are you", link: "./About.html" },
+
+     { keyword: "confirmation", link: "./Confirmation.html" },
+     { keyword: "order confirmed", link: "./Confirmation.html" },
+
+     { keyword: "contact", link: "./Contact.html" },
+     { keyword: "phone", link: "./Contact.html" },
+     { keyword: "email", link: "./Contact.html" },
+
+     { keyword: "order", link: "./Order.html" },
+     { keyword: "place order", link: "./Order.html" },
+     { keyword: "custom cake", link: "./Order.html" },
+  
+     { keyword: "products", link: "./Products.html" },
+     { keyword: "cakes", link: "./Products.html" },
+     { keyword: "muffins", link: "./Products.html" },
+     { keyword: "baking", link: "./Products.html" },
+  
+     { keyword: "reviews", link: "./Reviews.html" },
+     { keyword: "testimonials", link: "./Reviews.html" },
+
+     { keyword: "suggestions", link: "./Suggestions.html" },
+     { keyword: "feedback", link: "./Suggestions.html" }
+    ];
+
+    function performSearch() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const resultsBox = document.getElementById("searchResults");
+
+      if (input.trim() === "") {
+        resultsBox.style.display = "none";
+        return;
+      }
+
+      const matches = searchData.filter(item =>
+        item.keyword.includes(input)
+      );
+
+      resultsBox.innerHTML =
+      matches.length
+      ? matches.map(item => `<p onclick="location.href='${item.link}'">${item.keyword}</p>`).join("")
+      : "<p>No results found</p>";
+
+      resultsBox.style.display = "block";
+    }     
+     // Category filtering
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const cards = document.querySelectorAll(".card");
+
+    filterButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const category = button.dataset.category;
+        cards.forEach(card => {
+          if (category === "all" || card.dataset.category === category) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
+    });
+    function updateDateTime() {
+     const now = new Date();
+
+     const options = {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit'
+     };
+
+     const formatted = now.toLocaleString('en-ZA', options);
+     document.getElementById('date-time').textContent = formatted;
+    }
+
+    // Update every second
+    setInterval(updateDateTime, 1000);
+    updateDateTime();
+  </script>
+</body>
+</html>

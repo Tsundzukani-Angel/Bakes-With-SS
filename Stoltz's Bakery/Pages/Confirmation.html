@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stoltz's Bakery</title>
+    <link rel="stylesheet" href="../Css/style.css">
+</head>
+<body class = "confirmation-page">
+  <main>
+    <niv>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search..." onkeyup="performSearch()">
+        <div id="searchResults" class="search-results"></div>
+      </div>
+    </niv>
+    <div class="confirmation-container">
+      <h1>Order Confirmed!</h1>
+      <p>Thank you for ordering with <strong>Stoltz's Bakery</strong> 💕</p>
+      <p>Your delicious treat is on its way!</p>
+
+      <div class="details">
+        <p><strong>Name:</strong> <span id="customerName"></span></p>
+        <p><strong>Email:</strong> <span id="customerEmail"></span></p>
+        <p><strong>Product Ordered:</strong> <span id="orderedProduct"></span></p>
+      </div>
+
+      <a href="../index.html" class="btn">Back to Home</a>
+      <a href="Order.html" class="btn">Place Another Order</a>
+       
+    </div> 
+  </main>
+
+  <footer>
+    <p>&copy; Stoltz's Bakery 2025</p>
+    <p id="date-time"></p>
+  </footer>
+
+  <script>
+    // Get details from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const name = urlParams.get("name");
+    const email = urlParams.get("email");
+    const product = urlParams.get("product");
+
+    // Insert into HTML
+    document.getElementById("customerName").textContent = name || "Customer";
+    document.getElementById("customerEmail").textContent = email || "Not provided";
+    document.getElementById("orderedProduct").textContent = product || "N/A";
+
+    // Confetti animation
+    function createConfetti() {
+      const confetti = document.createElement("div");
+      confetti.classList.add("confetti");
+      confetti.style.left = Math.random() * window.innerWidth + "px";
+      confetti.style.backgroundColor = ["#ff80aa", "#ffb6c1", "#ffd6e0", "#e75480"][Math.floor(Math.random() * 4)];
+      confetti.style.animationDuration = 2 + Math.random() * 3 + "s";
+      document.body.appendChild(confetti);
+      setTimeout(() => confetti.remove(), 5000);
+    }
+    const searchData = [
+     { keyword: "home", link: "../index.html" },
+     { keyword: "homepage", link: "../index.html" },
+  
+     { keyword: "about", link: "./About.html" },
+     { keyword: "who are you", link: "./About.html" },
+
+     { keyword: "confirmation", link: "./Confirmation.html" },
+     { keyword: "order confirmed", link: "./Confirmation.html" },
+
+     { keyword: "contact", link: "./Contact.html" },
+     { keyword: "phone", link: "./Contact.html" },
+     { keyword: "email", link: "./Contact.html" },
+
+     { keyword: "order", link: "./Order.html" },
+     { keyword: "place order", link: "./Order.html" },
+     { keyword: "custom cake", link: "./Order.html" },
+  
+     { keyword: "products", link: "./Products.html" },
+     { keyword: "cakes", link: "./Products.html" },
+     { keyword: "muffins", link: "./Products.html" },
+     { keyword: "baking", link: "./Products.html" },
+  
+     { keyword: "reviews", link: "./Reviews.html" },
+     { keyword: "testimonials", link: "./Reviews.html" },
+
+     { keyword: "suggestions", link: "./Suggestions.html" },
+     { keyword: "feedback", link: "./Suggestions.html" }
+    ];
+
+    function performSearch() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const resultsBox = document.getElementById("searchResults");
+
+      if (input.trim() === "") {
+        resultsBox.style.display = "none";
+        return;
+      }
+
+      const matches = searchData.filter(item =>
+        item.keyword.includes(input)
+      );
+
+      resultsBox.innerHTML =
+      matches.length
+      ? matches.map(item => `<p onclick="location.href='${item.link}'">${item.keyword}</p>`).join("")
+      : "<p>No results found</p>";
+
+      resultsBox.style.display = "block";
+    }   
+
+    for (let i = 0; i < 80; i++) {
+      setTimeout(createConfetti, i * 100);
+    }
+    function updateDateTime() {
+     const now = new Date();
+
+     const options = {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit'
+     };
+
+     const formatted = now.toLocaleString('en-ZA', options);
+     document.getElementById('date-time').textContent = formatted;
+    }
+
+    // Update every second
+    setInterval(updateDateTime, 1000);
+    updateDateTime();
+  </script>
+</body>
+</html>

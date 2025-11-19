@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Order | Stoltz's Bakery</title>
+     <link rel="stylesheet" href="../Css/style.css">
+</head>
+<body>
+    <!--Navigation-->
+    <nav>
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <div class="nav-links" id="nav-links">
+        <a href="../index.html" >Home</a>
+        <a href = "./Products.html">Our Products</a>
+        <a href = "./Order.html">Place Order</a>
+        <a href = "./Contact.html" class="active">Contact Us</a>
+        <a href = "./About.html">About Us</a>
+        <a href = "./Reviews.html">Reviews</a> 
+        <a href = "./Suggestions.html">Suggestions</a>
+      </div>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search..." onkeyup="performSearch()">
+        <div id="searchResults" class="search-results"></div>
+      </div>
+    </nav>
+    <main>
+     <section class = "order">
+        <h1>Place Your Order</h1>
+        <p>Delicious treats, baked with love, delivered to you!</p>
+     </section>
+
+     <!--Form for orders-->
+     <section class = "order-form card">
+        <h2>Order form</h2>
+        <form id="orderForm">
+         <input type="text" name="name" placeholder="Enter your full names" required>
+         <input type="email" name="email" placeholder="Enter your email" required>
+         <input type="tel" name="phone" placeholder="Enter your phone number" required><br/>
+
+         <label for="product">Choose your cake or muffin:</label><br/>
+         <select name="product" id="product" required>
+           <option value="">Select a Cake or Muffin</option>
+           <option value="Chocolate Cake">Chocolate Cake</option>
+           <option value="Chocolate Vanilla Cake">Chocolate Vanilla Cake</option>
+           <option value="Caramel Chocolate Cake">Caramel Chocolate Cake</option>
+           <option value="Red Velvet Cake">Red Velvet Cake</option>
+           <option value="Vanilla Cake">Vanilla Cake</option>
+           <option value="Chocolate Strawberry Cake">Chocolate Strawberry Cake</option>
+           <option value="Chocolate Muffin">Chocolate Muffin</option>
+           <option value="Blueberry Muffin">Blueberry Muffin</option>
+           <option value="Coconut Muffin">Coconut Muffin</option>
+           <option value="Banana Muffin">Banana Muffin</option>
+           <option value="Apple Muffins">Apple Muffins</option>
+           <option value="Apple Cinnamon Oatmeal Muffins">Apple Cinnamon Oatmeal Muffins</option>
+           <option value="Cranberry Muffins">Cranberry Muffins</option>
+           <option value="Peanut Butter Banana Muffins">Peanut Butter Banana Muffins</option>
+           <option value="Pumpkin-Apple Muffins with Streusel Topping">Pumpkin-Apple Muffins with Streusel Topping</option>
+           <option value="Mint Chocolate Chip Muffin">Mint Chocolate Chip Muffin</option>
+           <option value="Paw Petrol">Paw Petrol</option>
+           <option value="Mickey Mouse">Mickey Mouse</option>
+           <option value="Minnie Mouse">Minnie Mouse</option>
+           <option value="SpiderMan">SpiderMan</option>
+           <option value="Custom">Custom</option>
+         </select><br/>
+
+          <!--Instructions-->
+         <textarea name="message" rows="4" placeholder="Special instructions (e.g. Message; Flavour you prefer)"></textarea><br/>
+
+         <!--Pickup Or delivery options-->
+         <label>Delivery Option:</label>
+         <div class="delivery-options">
+          <input type="radio" name="delivery" value="pickup" required>Pickup<br/>
+          <input type="radio" name="delivery" value="delivery">Delivery
+         </div>
+
+          <!--Delivery address (hidden by default)-->
+          <div id="delivery-address" style="display:none; margin-top:15px;">
+            <textarea id="address" name="address" rows="3" placeholder="Enter your delivery address"></textarea>
+          </div>
+
+        </form>
+     </section><br/>
+
+        <!--Payment information-->
+        <section class = "order-info card">
+            <h2>Payment options</h2>
+            <div class="payment-options">
+             <label><input type="radio" name="payment" value="EFT" required>EFT(Bank Transfer)</label><br>
+             <label><input type="radio" name="payment" value="Cash"> Cash on Delivery</label><br>
+             <label><input type="radio" name="payment" value="PayPal">Pay online with PayPal</label>
+            </div>
+
+            <div id="payment-details" class="payment-details">
+              <p>Please select a payment method to see details.</p>
+            </div>
+
+             <button type="submit" form="orderForm" class="btn">Place Order</button>
+        </section>
+
+         <a href="../Pages/Cakes.html" class="btn">Back to products</a>
+
+     <section class="contact-socials">
+       <h2>Follow Us</h2>
+       <a href="#"><img src="../Assests/IG.png" alt="Instagram" width="30"></a>
+       <a href="#"><img src="../Assests/FB.jpeg" alt="Facebook" width="40"></a>
+       <a href="#"><img src="../Assests/TikTok.webp" alt="TikTok" width="30"></a>
+     </section>
+    </main>
+     <footer >
+      <p>&copy; Stoltz's Bakery 2025</p>
+      <p id="date-time"></p>
+    </footer>
+  <script>
+  //hambuger menu 
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+    const deliveryOptions = document.querySelectorAll('input[name="delivery"]');
+    const deliveryAddress = document.getElementById("delivery-address");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+
+    const nav = document.querySelector("nav");
+
+       window.addEventListener("scroll", () => {
+        if (window.scrollY > 10) {
+          nav.classList.add("scrolled");
+        } else {
+           nav.classList.remove("scrolled");
+        }
+    });
+    //Search functionality
+    const searchData = [
+     { keyword: "home", link: "../index.html" },
+     { keyword: "homepage", link: "../index.html" },
+  
+     { keyword: "about", link: "./About.html" },
+     { keyword: "who are you", link: "./About.html" },
+
+     { keyword: "confirmation", link: "./Confirmation.html" },
+     { keyword: "order confirmed", link: "./Confirmation.html" },
+
+     { keyword: "contact", link: "./Contact.html" },
+     { keyword: "phone", link: "./Contact.html" },
+     { keyword: "email", link: "./Contact.html" },
+
+     { keyword: "order", link: "./Order.html" },
+     { keyword: "place order", link: "./Order.html" },
+     { keyword: "custom cake", link: "./Order.html" },
+  
+     { keyword: "products", link: "./Products.html" },
+     { keyword: "cakes", link: "./Products.html" },
+     { keyword: "muffins", link: "./Products.html" },
+     { keyword: "baking", link: "./Products.html" },
+  
+     { keyword: "reviews", link: "./Reviews.html" },
+     { keyword: "testimonials", link: "./Reviews.html" },
+
+     { keyword: "suggestions", link: "./Suggestions.html" },
+     { keyword: "feedback", link: "./Suggestions.html" }
+    ];
+
+    function performSearch() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const resultsBox = document.getElementById("searchResults");
+
+      if (input.trim() === "") {
+        resultsBox.style.display = "none";
+        return;
+      }
+
+      const matches = searchData.filter(item =>
+        item.keyword.includes(input)
+      );
+
+      resultsBox.innerHTML =
+      matches.length
+      ? matches.map(item => `<p onclick="location.href='${item.link}'">${item.keyword}</p>`).join("")
+      : "<p>No results found</p>";
+
+      resultsBox.style.display = "block";
+    }   
+
+    // Show/hide delivery address based on option selected
+    deliveryOptions.forEach(option => {
+      option.addEventListener("change", () => {
+        if (option.value === "delivery" && option.checked) {
+          deliveryAddress.style.display = "block";
+        } else {
+          deliveryAddress.style.display = "none";
+        }
+      });
+    });
+
+
+    const orderForm = document.getElementById("orderForm");
+
+    orderForm.addEventListener("submit", (e) => {
+    e.preventDefault(); // Prevent actual form submission
+
+    // Collect form data
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const product = e.target.product.value;
+
+    // Redirect with info
+    window.location.href = `confirmation.html?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&product=${encodeURIComponent(product)}`;
+   });
+
+     // Pre-select product logic
+    const urlParams = new URLSearchParams(window.location.search);
+    const selectedProduct = urlParams.get("product");
+
+    if (selectedProduct) {
+      const productDropdown = document.getElementById("product");
+
+      // Loop through dropdown options
+      for (let option of productDropdown.options) {
+       if (option.text.toLowerCase() === selectedProduct.toLowerCase()) {
+         option.selected = true;
+         break;
+       }
+     }
+   }
+
+    // Payment options dynamic display
+    const paymentOptions = document.querySelectorAll('input[name="payment"]');
+    const paymentDetails = document.getElementById("payment-details");
+
+    paymentOptions.forEach(option => {
+     option.addEventListener("change", () => {
+      switch (option.value) {
+      case "EFT":
+        paymentDetails.innerHTML = `
+          <h3>Banking Details</h3>
+          <p><strong>Bank:</strong> Capitec</p>
+          <p><strong>Account Name:</strong> Bakes With SS</p>
+          <p><strong>Account Number:</strong> 1234567890</p>
+          <p><strong>Reference:</strong> Your Name + Order</p>
+        `;
+        break;
+
+      case "Cash":
+        paymentDetails.innerHTML = `
+          <h3>Cash on Delivery</h3>
+          <p>Please have the exact amount ready when your order is delivered. 💵</p>
+        `;
+        break;
+
+      case "PayPal":
+        paymentDetails.innerHTML = `
+          <h3>PayPal Payment</h3>
+          <p>Send payment to: <strong>bakeswithss@gmail.com</strong></p>
+          <button class="btn">Pay with PayPal</button>
+        `;
+        break;
+
+      default:
+        paymentDetails.innerHTML = `<p>Please select a payment method.</p>`;
+      }
+     });
+    });
+    function updateDateTime() {
+     const now = new Date();
+
+     const options = {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit'
+     };
+
+     const formatted = now.toLocaleString('en-ZA', options);
+     document.getElementById('date-time').textContent = formatted;
+    }
+
+    // Update every second
+    setInterval(updateDateTime, 1000);
+    updateDateTime();
+
+  </script>
+</body>
+</html>

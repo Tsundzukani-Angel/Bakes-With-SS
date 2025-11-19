@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Reviews | Stoltz's Bakery</title>
+    <link rel="stylesheet" href="../Css/style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+        <div class="nav-links" id="nav-links">
+          <a href="../index.html">Home</a>
+          <a href="./Products.html">Our Products</a>
+          <a href="./Order.html">Place Order</a>
+          <a href="./Contact.html">Contact Us</a>
+          <a href = "./About.html">About Us</a>
+          <a href="./Reviews.html">Reviews</a>
+          <a href="./Suggestions.html">Suggestions</a>
+        </div>
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="Search..." onkeyup="performSearch()">
+          <div id="searchResults" class="search-results"></div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="reviews-section">
+            <h1 class="title">Customer Reviews 💕</h1>
+            <p class="subtitle">The feedback from the people we bake for</p>
+
+            <div class="reviews-container">
+
+                <div class="review-card">
+                    <p class="stars">★★★★★</p>
+                    <p>“I ordered a chocolate cake for my daughter’s birthday, and everyone LOVED it! Soft, moist and absolutely delicious.”</p>
+                    <h4>— Sarah M.</h4>
+                </div>
+
+                <div class="review-card">
+                    <p class="stars">★★★★★</p>
+                    <p>“Your muffins are the best in the whole of Tzaneen! Fresh, fluffy and so tasty. I’m definitely coming back.”</p>
+                    <h4>— Lerato P.</h4>
+                </div>
+
+                <div class="review-card">
+                    <p class="stars">★★★★★</p>
+                    <p>“Ordered a custom cake and it came out exactly as I imagined it. Thank you for making my event special!”</p>
+                    <h4>— Thabo K.</h4>
+                </div>
+
+                <div class="review-card">
+                    <p class="stars">★★★★★</p>
+                    <p>“The service was quick, friendly and professional. The cake tasted heavenly. Highly recommended!”</p>
+                    <h4>— Ayanda R.</h4>
+                </div>
+
+                <div class="review-card">
+                    <p class="stars">★★★★★</p>
+                    <p>“Hands down the BEST chocolate vanilla cake I've ever tasted. Soft, creamy and perfectly balanced!”</p>
+                    <h4>— Melissa J.</h4>
+                </div>
+
+                <div class="review-card">
+                    <p class="stars">★★★★</p>
+                    <p>“Thank you for my order! The cake was beautiful and the taste was even better. Everyone kept asking where I bought it.”</p>
+                    <h4>— Kabelo S.</h4>
+                </div>
+
+                <div class="review-card">
+                    <p class="stars">★★★★</p>
+                    <p>“I am officially addicted to your muffins. The blueberry one is a whole experience on its own.”</p>
+                    <h4>— Nomsa D.</h4>
+                </div>
+
+                <div class="review-card">
+                    <p class="stars">★★★★</p>
+                    <p>“Excellent customer service, fast delivery and the freshness is unmatched!”</p>
+                    <h4>— Precious L.</h4>
+                </div>
+
+                <div class="review-card">
+                    <p class="stars">★★★★</p>
+                    <p>“My husband said it tasted like something from a professional hotel bakery. Highly impressed!”</p>
+                    <h4>— Zanele R.</h4>
+                </div>
+
+                <div class="review-card">
+                    <p class="stars">★★★★★</p>
+                    <p>“Affordable, delicious and beautifully presented. Your cakes are perfect every time.”</p>
+                    <h4>— Refilwe T.</h4>
+                </div>
+
+                <div class="review-card">
+                    <p class="stars">★★★★</p>
+                    <p>“Our office loved the muffins! Soft, fresh and the perfect sweetness. Will place a bulk order soon.”</p>
+                    <h4>— Jonathan M.</h4>
+                </div>
+
+                <div class="review-card">
+                    <p class="stars">★★★★★</p>
+                    <p>“The red velvet cake literally melted in my mouth. I’m ordering again next week!”</p>
+                    <h4>— Mbali S.</h4>
+                </div>
+
+                <div class="review-card">
+                    <p class="stars">★★★★</p>
+                    <p>“Super neat packaging, friendly delivery and the cake tasted heavenly. You’ve earned a loyal customer!”</p>
+                    <h4>— Christine W.</h4>
+                </div>
+
+                <div class="review-card">
+                    <p class="stars">★★★★★</p>
+                    <p>“Your bakery is honestly a hidden gem in Tzaneen. Quality is 10/10 every time.”</p>
+                    <h4>— Sipho L.</h4>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+      <p>&copy; Stoltz's Bakery 2025</p>
+      <p id="date-time"></p>
+    </footer>
+
+    <script>
+        //hambuger menu
+        const menuToggle = document.getElementById("menu-toggle");
+        const navLinks = document.getElementById("nav-links");
+
+        menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+       })
+       
+       const nav = document.querySelector("nav");
+
+       window.addEventListener("scroll", () => {
+        if (window.scrollY > 10) {
+          nav.classList.add("scrolled");
+        } else {
+           nav.classList.remove("scrolled");
+        }
+       });
+       const searchData = [
+        { keyword: "home", link: "../index.html" },
+        { keyword: "homepage", link: "../index.html" },
+  
+        { keyword: "about", link: "./About.html" },
+        { keyword: "who are you", link: "./About.html" },
+
+        { keyword: "confirmation", link: "./Confirmation.html" },
+        { keyword: "order confirmed", link: "./Confirmation.html" },
+
+        { keyword: "contact", link: "./Contact.html" },
+        { keyword: "phone", link: "./Contact.html" },
+        { keyword: "email", link: "./Contact.html" },
+
+        { keyword: "order", link: "./Order.html" },
+        { keyword: "place order", link: "./Order.html" },
+        { keyword: "custom cake", link: "./Order.html" },
+  
+        { keyword: "products", link: "./Products.html" },
+        { keyword: "cakes", link: "./Products.html" },
+        { keyword: "muffins", link: "./Products.html" },
+        { keyword: "baking", link: "./Products.html" },
+  
+        { keyword: "reviews", link: "./Reviews.html" },
+        { keyword: "testimonials", link: "./Reviews.html" },
+
+        { keyword: "suggestions", link: "./Suggestions.html" },
+        { keyword: "feedback", link: "./Suggestions.html" }
+       ];
+
+       function performSearch() {
+         const input = document.getElementById("searchInput").value.toLowerCase();
+         const resultsBox = document.getElementById("searchResults");
+
+         if (input.trim() === "") {
+          resultsBox.style.display = "none";
+          return;
+         }
+
+         const matches = searchData.filter(item =>
+          item.keyword.includes(input)
+         );
+
+         resultsBox.innerHTML =
+         matches.length
+         ? matches.map(item => `<p onclick="location.href='${item.link}'">${item.keyword}</p>`).join("")
+         : "<p>No results found</p>";
+
+         resultsBox.style.display = "block";
+       }
+        function updateDateTime() {
+            const now = new Date();
+            const options = {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            };
+            document.getElementById('date-time').textContent =
+                now.toLocaleString('en-ZA', options);
+        }
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+    </script>
+</body>
+</html>
